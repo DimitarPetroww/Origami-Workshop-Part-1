@@ -28,7 +28,7 @@ nav .listItem:not(:first-child) {
     border-top: 2px solid #ffa000;
 }
 
-footer .listItem:not(:last-child) {
+footer .listItem {
     padding: 2%;
     margin-top: 1.5%;
     border-bottom: 2px solid #234465;
