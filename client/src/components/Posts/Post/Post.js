@@ -1,14 +1,14 @@
 import './Post.css';
 import PostAuthor from './PostAuthor/PostAuthor';
 
-function Post() {
+function Post({ post }) {
     return (
-        <div className="post">
+        <div className="post" key={post._id}>
             <img src="/blue-origami-bird.png" alt="" />
             <p className="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nostrum quo fuga! Quaerat laboriosam commodi doloribus, earum, reiciendis amet dolorum odit fugit eligendi molestias cupiditate, explicabo iste natus numquam ab.
+                {post.description}
             </p>
-            <PostAuthor />
+            <PostAuthor>{post.author}</PostAuthor>
         </div>
     );
 }

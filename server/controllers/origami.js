@@ -3,7 +3,9 @@ const models = require('../models');
 module.exports = {
     get: (req, res, next) => {
         models.Origami.find()
-            .then((origamies) => res.send(origamies))
+            .then((origamies) => {
+                res.send(origamies)
+            })
             .catch(next);
     },
 

@@ -3,7 +3,7 @@ import React from "react"
 import './Posts.css';
 import Post from "./Post/Post"
 
-import * as post_service from "../../services/post"
+import * as postService from "../../services/post"
 
 class Posts extends React.Component {
     constructor(props) {
@@ -13,7 +13,8 @@ class Posts extends React.Component {
         }
     }
     componentDidMount() {
-        post_service.getAll().then(posts => {
+        postService.getAll().then(posts => {
+            console.log(posts);
             this.setState({ posts })
         })
     }
@@ -21,9 +22,9 @@ class Posts extends React.Component {
     render() {
         return (
             <div className="posts">
-                {this.state.posts.map(x=> {
-                    <Post />
-                })}
+                {this.state.posts.map(x=> 
+                    <Post post={x}/>
+                )}
             </div>
         );
     }

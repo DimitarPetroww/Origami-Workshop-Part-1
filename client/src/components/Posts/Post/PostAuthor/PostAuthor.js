@@ -1,10 +1,10 @@
 import './PostAuthor.css';
 
-function PostAuthor() {
+function PostAuthor({children}) {
     return (
         <div>
             <span>
-                <small>Author:</small> qnko
+                <small>Author:</small> {children}
             </span>
         </div>
     );
